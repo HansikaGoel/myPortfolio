@@ -26,26 +26,46 @@ button {
   border-radius: 5px;
   border: 3px solid white;
 }
+button:hover {
+  color: blue;
+  box-shadow: 5px 5px 10px white;
+}
 
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 10px;
 }
 
 .box {
-  width: 50%;
+  margin-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
-.what {
+.what1,
+.what2 {
   font-size: 150px;
   font-weight: 700px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+  padding-bottom: 3px;
+}
+.what2 {
+  /* text-decoration: solid 3px underline white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.what3 {
+  font-size: 150px;
+  font-weight: 700px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: red;
 }
 .name {
   padding: 15px;
@@ -67,56 +87,66 @@ button {
   box-shadow: 2px 2px 20px -3px white;
 }
 .heading {
-  margin: 20px;
   color: gold;
   font-size: 40px;
   font-weight: bold;
   text-decoration: underline;
+  text-align: center;
   padding: 5px;
   border-radius: 3px;
+  background-color: darkmagenta;
 }
 
 .detail {
   color: white;
-  margin: 20px;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: bold;
   font-family: fangsong;
-  box-sizing: content-box;
   border-radius: 3px;
-  line-height: 50px;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  float: left;
 }
 .detail:hover {
   background-color: #d8baba;
   color: black;
 }
-.main .detail:hover {
-  background-color: white;
-  color: black;
-}
-
 .detail li:hover {
   background-color: teal;
   color: black;
 }
 
-.link {
-  color: blue;
-  text-decoration: none;
+.big_box {
+  height: 800px;
+  background-color: teal;
+  border: 1px solid white;
+  box-shadow: 3px 3px 3px 3px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  border-radius: 3px;
 }
-.button-click-me {
-  color: brown;
-  font-weight: bold;
-}
-
+/* .detail_button {
+  background-color: red;
+  color: black;
+  margin: 30px;
+  height: 50px;
+  width: 100px;
+} */
+/* .detail_button:hover { */
+/* background-color: crimson;
+  color: white;
+} */
 .main_container {
   height: 800px;
   background-color: teal;
   border: 1px solid white;
   box-shadow: 3px 3px 3px 3px white;
   border-radius: 3px;
-  margin: 20px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
@@ -141,7 +171,6 @@ button {
 }
 #box2 .detail {
   font-size: 25px;
-  box-sizing: content-box;
   line-height: 23px;
 }
 #box3 {
@@ -153,22 +182,23 @@ button {
   grid-row: 2/2;
 }
 
-.footer {
-  height: 250px;
-  background-color: teal;
+.space {
+  height: 50px;
+  background-color: red;
+}
+
+footer {
+  height: 300px;
+  background-color: black;
   border: 1px solid white;
   box-shadow: 3px 3px 3px 3px white;
-  margin: 20px;
   border-radius: 3px;
 }
-.big_box {
-  height: 400px;
-  background-color: teal;
-  border: 1px solid white;
-  box-shadow: 3px 3px 3px 3px white;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 3px;
+.link {
+  color: blue;
+  text-decoration: none;
+}
+.button-click-me {
+  color: brown;
+  font-weight: bold;
 }

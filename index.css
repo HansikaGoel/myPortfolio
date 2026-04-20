@@ -142,9 +142,12 @@ button:hover,
   background-color: #d8baba;
   color: black;
 }
+
 .detail li:hover {
+  border-radius: 5px;
   background-color: teal;
   color: black;
+  padding: 0 0 5px 5px;
 }
 
 main {
@@ -183,7 +186,7 @@ main {
 .Hire_button {
   height: 50px;
   width: 100px;
-  margin-top: 50px;
+  margin: 50px 0px 50px 50px;
   background-color: red;
   color: black;
   border: 2px solid black;
@@ -248,7 +251,7 @@ main {
 .small_box {
   margin: 50px 50px 50px 50px;
   border: 2px solid white;
-  /* box-shadow: 3px 3px 3px 3px rgb(221, 141, 141); */
+  box-shadow: 3px 3px 3px 3px rgb(221, 141, 141);
   border-radius: 3px;
   display: flex;
   flex-direction: column;
@@ -275,6 +278,10 @@ main {
   grid-row: 2/2;
 }
 
+#box4 .detail li a {
+  font-size: 28px;
+  text-decoration: none;
+}
 footer {
   background-color: teal;
   margin: 20px 0 20px 0;
@@ -301,9 +308,11 @@ h3 {
 #ask {
   color: black;
   background-color: beige;
+  border-radius: 5px;
 }
 .ans {
   color: white;
+  border-radius: 5px;
 }
 .contact_detail {
   background-color: teal;

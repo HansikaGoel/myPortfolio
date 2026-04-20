@@ -18,7 +18,8 @@
   border-radius: 5px;
 }
 
-button {
+button,
+.scrol-up {
   box-sizing: border-box;
   box-shadow: 5px 5px 10px black;
   height: 45px;
@@ -26,20 +27,48 @@ button {
   border-radius: 5px;
   border: 3px solid white;
 }
-button:hover {
-  color: blue;
-  box-shadow: 5px 5px 10px white;
+button:hover,
+.scrol-up:hover {
+  height: 50px;
+  width: 125px;
+  color: rgb(246, 3, 189);
+  box-shadow: 5px 5px 10px rgb(177, 61, 150);
+  font-weight: bold;
+  text-decoration: solid underline;
 }
 
+/* .circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid teal;
+  animation-name: cover;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+@keyframes cover {
+  0% {
+    height: 780px;
+   transform: rotate3d(90); 
+  }
+  2% {
+    .circle:hover {
+      visibility: hidden;
+    }
+  }
+} */
 .container {
+  height: 720px;
+  margin: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  padding: 10px;
+  justify-content: space-around;
 }
 
 .box {
-  margin-left: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,21 +77,20 @@ button:hover {
 
 .what1,
 .what2 {
-  font-size: 150px;
+  font-size: 140px;
   font-weight: 700px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: white;
   padding-bottom: 3px;
 }
 .what2 {
-  /* text-decoration: solid 3px underline white; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
 }
 .what3 {
-  font-size: 150px;
+  font-size: 140px;
   font-weight: 700px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: red;
@@ -99,7 +127,7 @@ button:hover {
 
 .detail {
   color: white;
-  font-size: 27px;
+  font-size: 36px;
   font-weight: bold;
   font-family: fangsong;
   border-radius: 3px;
@@ -108,9 +136,9 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  float: left;
 }
-.detail:hover {
+
+#intro:hover {
   background-color: #d8baba;
   color: black;
 }
@@ -119,8 +147,13 @@ button:hover {
   color: black;
 }
 
+main {
+  margin: 20px 0 20px 0;
+}
+
 .big_box {
   height: 800px;
+  padding: 20px;
   background-color: teal;
   border: 1px solid white;
   box-shadow: 3px 3px 3px 3px white;
@@ -130,32 +163,92 @@ button:hover {
   align-content: center;
   border-radius: 3px;
 }
-/* .detail_button {
+.detail_button {
   background-color: red;
   color: black;
-  margin: 30px;
+  border: 2px solid black;
+  margin: 50px;
   height: 50px;
   width: 100px;
-} */
-/* .detail_button:hover { */
-/* background-color: crimson;
-  color: white;
-} */
+  padding: 10px;
+}
+
+.hire {
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.Hire_button {
+  height: 50px;
+  width: 100px;
+  margin-top: 50px;
+  background-color: red;
+  color: black;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.Hire_button:hover {
+  background-color: teal;
+  color: black;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: large;
+}
+.emoji {
+  height: 50px;
+  width: 100px;
+  margin: 50px;
+  visibility: hidden;
+  border-radius: 50%;
+  animation-name: hireMov;
+  animation-timing-function: ease-in-out;
+  animation-duration: 5s;
+  animation-iteration-count: 10;
+}
+
+@keyframes hireMov {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: visible;
+    transform: scale(1.1);
+  }
+  50% {
+    visibility: visible;
+    transform: scale(1.5);
+  }
+  75% {
+    tranform: scale(2);
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    tranform: scale(3);
+  }
+}
+
 .main_container {
   height: 800px;
-  background-color: teal;
+  background-color: black;
   border: 1px solid white;
-  box-shadow: 3px 3px 3px 3px white;
+  /* box-shadow: 3px 3px 3px 3px white; */
   border-radius: 3px;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 52% 50%;
 }
 .small_box {
   margin: 50px 50px 50px 50px;
-  box-sizing: content-box;
   border: 2px solid white;
-  box-shadow: 3px 3px 3px 3px black;
+  /* box-shadow: 3px 3px 3px 3px rgb(221, 141, 141); */
   border-radius: 3px;
   display: flex;
   flex-direction: column;
@@ -170,8 +263,8 @@ button:hover {
   grid-row: 1/2;
 }
 #box2 .detail {
-  font-size: 25px;
-  line-height: 23px;
+  font-size: 27px;
+  line-height: 25px;
 }
 #box3 {
   grid-column: 1/2;
@@ -182,23 +275,88 @@ button:hover {
   grid-row: 2/2;
 }
 
-.space {
+footer {
+  background-color: teal;
+  margin: 20px 0 20px 0;
+  height: 780px;
+  border: 1px solid white;
+  box-shadow: 3px 3px 3px 3px white;
+  border-radius: 3px;
+}
+
+.space1,
+.space2 {
   height: 50px;
   background-color: red;
 }
 
-footer {
-  height: 300px;
-  background-color: black;
-  border: 1px solid white;
-  box-shadow: 3px 3px 3px 3px white;
-  border-radius: 3px;
+h3 {
+  background-color: teal;
+  color: white;
+  font-size: 50px;
+  height: 150px;
+  text-align: center;
+  text-decoration: underline solid white 2px;
+}
+#ask {
+  color: black;
+  background-color: beige;
+}
+.ans {
+  color: white;
+}
+.contact_detail {
+  background-color: teal;
+  height: 250px;
+  width: 500px;
+  color: wheat;
+  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.column {
+  font-weight: bold;
+  background-color: teal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.column1 {
+  background-color: teal;
+  font-size: 35px;
+  border-radius: 5px;
+}
+.column2 {
+  background-color: teal;
+  font-size: 35px;
+  border-radius: 5px;
+}
+
+.github,
+.linkedin {
+  height: 25px;
+  border-radius: 10px;
 }
 .link {
   color: blue;
   text-decoration: none;
 }
-.button-click-me {
-  color: brown;
-  font-weight: bold;
+
+.space2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.scrol-up {
+  height: 40px;
+  width: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.scrol-up:hover {
+  width: 50px;
 }

@@ -31,34 +31,11 @@ button:hover,
 .scrol-up:hover {
   height: 50px;
   width: 125px;
-  color: rgb(246, 3, 189);
-  box-shadow: 5px 5px 10px rgb(177, 61, 150);
+  color: teal;
+  box-shadow: 5px 5px 10px rgb(137, 131, 136);
   font-weight: bold;
   text-decoration: solid underline;
 }
-
-/* .circle {
-  height: 20px;
-  width: 20px;
-  border-radius: 10px;
-  background-color: white;
-  border: 2px solid teal;
-  animation-name: cover;
-  animation-timing-function: ease-in-out;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-}
-@keyframes cover {
-  0% {
-    height: 780px;
-   transform: rotate3d(90); 
-  }
-  2% {
-    .circle:hover {
-      visibility: hidden;
-    }
-  }
-} */
 .container {
   height: 720px;
   margin: 20px;
@@ -67,6 +44,13 @@ button:hover,
   justify-content: space-around;
 }
 
+.table2 {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .box {
   padding: 10px;
   display: flex;
@@ -93,20 +77,51 @@ button:hover,
   font-size: 140px;
   font-weight: 700px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: red;
+  color: teal;
+}
+.table3 {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.typing-text {
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid black; /* cursor */
+  width: 0;
+  animation:
+    typing 4s steps(40, end) forwards,
+    blink 0.8s infinite;
+}
+
+/* typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 .name {
   padding: 15px;
-  color: fuchsia;
+  color: crimson;
   font-size: 80px;
   font-weight: 700px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.name:hover {
-  color: crimson;
-  transition-delay: 0s;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
 }
 .photo {
   height: 700px;
@@ -115,14 +130,13 @@ button:hover,
   box-shadow: 2px 2px 20px -3px white;
 }
 .heading {
-  color: gold;
+  color: teal;
   font-size: 40px;
   font-weight: bold;
   text-decoration: underline;
-  text-align: center;
+  text-align: left;
   padding: 5px;
   border-radius: 3px;
-  background-color: darkmagenta;
 }
 
 .detail {
@@ -138,11 +152,6 @@ button:hover,
   align-content: center;
 }
 
-#intro:hover {
-  background-color: #d8baba;
-  color: black;
-}
-
 .detail li:hover {
   border-radius: 5px;
   background-color: teal;
@@ -155,6 +164,7 @@ main {
 }
 
 .big_box {
+  margin: 5px;
   height: 800px;
   padding: 20px;
   background-color: teal;
@@ -187,9 +197,9 @@ main {
   height: 50px;
   width: 100px;
   margin: 50px 0px 50px 50px;
-  background-color: red;
+  background-color: teal;
   color: black;
-  border: 2px solid black;
+  border: 2px solid white;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -198,21 +208,17 @@ main {
   font-weight: bold;
 }
 .Hire_button:hover {
-  background-color: teal;
-  color: black;
-  border: 2px solid black;
   font-weight: bold;
   font-size: large;
 }
 .emoji {
   height: 50px;
-  width: 100px;
+  border-radius: 50%;
   margin: 50px;
   visibility: hidden;
-  border-radius: 50%;
   animation-name: hireMov;
   animation-timing-function: ease-in-out;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-iteration-count: 10;
 }
 
@@ -239,10 +245,11 @@ main {
 }
 
 .main_container {
+  margin: 5px;
   height: 800px;
   background-color: black;
   border: 1px solid white;
-  /* box-shadow: 3px 3px 3px 3px white; */
+  box-shadow: 3px 3px 3px 3px white;
   border-radius: 3px;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -251,7 +258,7 @@ main {
 .small_box {
   margin: 50px 50px 50px 50px;
   border: 2px solid white;
-  box-shadow: 3px 3px 3px 3px rgb(221, 141, 141);
+  box-shadow: 3px 3px 3px 3px teal;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
@@ -260,6 +267,9 @@ main {
 #box1 {
   grid-column: 1/2;
   grid-row: 1/2;
+}
+#box1 .detail {
+  font-size: 34px;
 }
 #box2 {
   grid-column: 2/2;
@@ -284,17 +294,11 @@ main {
 }
 footer {
   background-color: teal;
-  margin: 20px 0 20px 0;
-  height: 780px;
+  margin: 20px 5px 20px 5px;
+  height: 740px;
   border: 1px solid white;
   box-shadow: 3px 3px 3px 3px white;
   border-radius: 3px;
-}
-
-.space1,
-.space2 {
-  height: 50px;
-  background-color: red;
 }
 
 h3 {
@@ -302,17 +306,8 @@ h3 {
   color: white;
   font-size: 50px;
   height: 150px;
-  text-align: center;
+  margin-left: 200px;
   text-decoration: underline solid white 2px;
-}
-#ask {
-  color: black;
-  background-color: beige;
-  border-radius: 5px;
-}
-.ans {
-  color: white;
-  border-radius: 5px;
 }
 .contact_detail {
   background-color: teal;
@@ -328,7 +323,7 @@ h3 {
   background-color: teal;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .column1 {
   background-color: teal;
@@ -339,25 +334,21 @@ h3 {
   background-color: teal;
   font-size: 35px;
   border-radius: 5px;
-}
-
-.github,
-.linkedin {
-  height: 25px;
-  border-radius: 10px;
-}
-.link {
-  color: blue;
-  text-decoration: none;
-}
-
-.space2 {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  /* justify-content: space-between; */
+  align-items: end;
 }
 
+.linkedin,
+.email {
+  height: 30px;
+  border-radius: 10px;
+}
+.github {
+  height: 35px;
+  border-radius: 10px;
+}
 .scrol-up {
   height: 40px;
   width: 45px;
@@ -368,4 +359,11 @@ h3 {
 }
 .scrol-up:hover {
   width: 50px;
+}
+.last {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
 }

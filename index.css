@@ -320,6 +320,7 @@ h3 {
 .contact_detail {
   background-color: teal;
   height: 250px;
+  width: 500px;
   color: wheat;
   font-size: 25px;
   font-family: Georgia, "Times New Roman", Times, serif;

@@ -151,7 +151,6 @@ button:hover,
 .detail {
   color: white;
   font-size: 36px;
-  font-weight: bold;
   font-family: fangsong;
   border-radius: 3px;
   padding: 5px;
@@ -321,7 +320,6 @@ h3 {
 .contact_detail {
   background-color: teal;
   height: 250px;
-  width: 500px;
   color: wheat;
   font-size: 25px;
   font-family: Georgia, "Times New Roman", Times, serif;

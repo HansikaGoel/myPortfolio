@@ -43,13 +43,18 @@ button:hover,
   flex-direction: row;
   justify-content: space-around;
 }
-
+.flat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
 .table2 {
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .box {
   padding: 10px;
@@ -61,8 +66,7 @@ button:hover,
 
 .what1,
 .what2 {
-  font-size: 140px;
-  font-weight: 700px;
+  font-size: 120px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: white;
   padding-bottom: 3px;
@@ -74,8 +78,7 @@ button:hover,
   align-items: flex-start;
 }
 .what3 {
-  font-size: 140px;
-  font-weight: 700px;
+  font-size: 120px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: teal;
 }
@@ -85,14 +88,15 @@ button:hover,
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .typing-text {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: wrap;
   border-right: 3px solid black; /* cursor */
   width: 0;
   animation:
@@ -104,9 +108,11 @@ button:hover,
 @keyframes typing {
   from {
     width: 0;
+    white-space: nowrap;
   }
   to {
     width: 100%;
+    white-space: wrap;
   }
 }
 
@@ -117,10 +123,13 @@ button:hover,
   }
 }
 .name {
-  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
   color: crimson;
-  font-size: 80px;
-  font-weight: 700px;
+  font-size: 68px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .photo {
